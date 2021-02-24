@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Chat from './components/Chat.jsx';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
       <Router>
         <Switch>
           <Route path='/room'>
-            Chat Page
+            <Chat />
           </Route>
           <Route path='/'>
             Login Page
