@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 
 function Header() {
     return (
@@ -18,10 +18,10 @@ function Header() {
             </Main>
             <UserContainer>
                 <Name>
-                    Walter
+                    User
                 </Name>
                 <UserImage>
-                    <AccountCircleIcon />
+                    <img src='https://i.imgur.com/6VBx3io.png' />
                 </UserImage>
             </UserContainer>
         </Container>
@@ -35,19 +35,24 @@ const Container = styled.div`
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
 `
 
 const Main = styled.div`
     display: flex;
+    margin-right: 16px;
+    margin-left: 16px;
 `
 
 const SearchContainer = styled.div`
     min-width: 400px;
+    margin-left: 16px;
+    margin-right: 16px;
     
-    `
+`
     
-    const Search = styled.div`
+const Search = styled.div`
     box-shadow: inset 0 0 0 1px rgb(104 74 104);    
     width: 100%;
     border-radius: 6px;
@@ -73,12 +78,21 @@ const UserContainer = styled.div`
     display: flex;
     align-items: center;
     padding-right: 16px;
+    position: absolute;
+    right: 0;
 `
 
 const Name = styled.div`
-
+    padding-right: 16px;
 `
 
 const UserImage = styled.div`
+    width: 28px;
+    height: 28px;
+    border: 2px solid white;
+    border-radius: 3px;
 
+    img {
+        width: 100%;
+    }
 `
