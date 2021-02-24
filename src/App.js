@@ -1,8 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Chat from './components/Chat.jsx';
-import Login from './components/Login.jsx';
-import Header from './components/Header.jsx';
+import Chat from './components/Chat';
+import Login from './components/Login';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import styled from 'styled-components';
 
 
@@ -13,6 +14,7 @@ function App() {
         <Container>
           <Header />
           <Main>
+            <Sidebar />  
           <Switch>
             <Route path='/room'>
               <Chat />
