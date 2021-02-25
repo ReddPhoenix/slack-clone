@@ -35,7 +35,7 @@ function Sidebar() {
                 </NewChannelContainer>
                 <ChannelsList>
                     <Channel>
-
+                        # Channel 1
                     </Channel>
                 </ChannelsList>
             </ChannelsContainer>
@@ -90,6 +90,9 @@ const MainChannelItem = styled.div`
     align-items: center;
     padding-left: 19px;
     cursor: pointer;
+    :hover {
+        background: #350D36;
+    }
 `
 
 const ChannelsContainer = styled.div` 
