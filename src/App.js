@@ -60,7 +60,7 @@ const Container = styled.div`
 `
 
 const Main = styled.div`
-background: purple;
-display: grid;
-grid-template-columns: 260px auto
+  background: lightgrey;
+  display: grid;
+  grid-template-columns: 260px auto
 `
