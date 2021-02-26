@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
+import ChatInput from './ChatInput';
 
 function Chat() {
     return (
@@ -18,15 +19,13 @@ function Chat() {
                     <div>
                         Details
                     </div>
-                    <InfoOutlinedIcon />
+                    <Info />
                 </ChannelDetails>
             </Header>
             <MessageContainer>
             
             </MessageContainer>
-            <ChatInput>
-            
-            </ChatInput>
+            <ChatInput />
         </Container>
 
     )
@@ -52,10 +51,6 @@ const MessageContainer = styled.div`
 
 `
 
-const ChatInput = styled.div`
-
-`
-
 const Channel = styled.div`
 
 `
@@ -77,4 +72,8 @@ const ChannelInfo = styled.div`
     font-size: 13px;
     margin-top: 8px;
 
+`
+
+const Info = styled(InfoOutlinedIcon)`
+    margin-left: 10px;
 `
