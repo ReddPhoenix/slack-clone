@@ -38,10 +38,12 @@ const InputContainer = styled.div`
             flex: 100%;
             border: none;
             font-size: 13px;
+            background: none;
         }
 
         input: focus {
             outline: none;
+            
         }
     }
 `
