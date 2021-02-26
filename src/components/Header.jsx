@@ -21,7 +21,7 @@ function Header() {
                     User
                 </Name>
                 <UserImage>
-                    <img src='https://i.imgur.com/6VBx3io.png' />
+                    <img src='https://i.imgur.com/6VBx3io.png' alt='user profile'/>
                 </UserImage>
             </UserContainer>
         </Container>
