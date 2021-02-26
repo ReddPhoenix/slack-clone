@@ -42,7 +42,9 @@ function Sidebar(props) {
                     <div>
                         Channels
                     </div>
-                    <AddIcon onClick={addChannel} style={{ cursor: 'pointer' }}/>
+                    <AddChannelContainer>
+                        <AddIcon onClick={addChannel} style={{ cursor: 'pointer' }} />
+                    </AddChannelContainer>
                 </NewChannelContainer>
                 <ChannelsList>
                     {
@@ -122,6 +124,7 @@ const NewChannelContainer = styled.div`
     height: 20px;
     padding-left: 19px;
     padding-right: 12px;
+    
 `
 
 const ChannelsList = styled.div`
@@ -139,3 +142,8 @@ const Channel = styled.div`
     }
 `
 
+const AddChannelContainer = styled.div`
+    :hover {
+        background: #350D36;
+    }
+`
