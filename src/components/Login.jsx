@@ -1,13 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import { auth, provider } from '../firebase';
 
 function Login() {
+
+    const signIn = () => {
+        auth.signInWithPopup(provider)
+            .then((result) => {
+            
+            })
+            .catch((error) => {
+                alert(error.message)
+            })
+    }
+
     return (
         <Container>
             <Content>
                 <SlackImg src='https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png' />
                 <h1>Sign in to Slack</h1>
-                <SignInButton>
+                <SignInButton onClick={() => signIn()}>
                     Sign In with Google
                 </SignInButton>
             </Content>
