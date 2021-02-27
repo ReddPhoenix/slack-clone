@@ -6,7 +6,7 @@ function ChatMessage() {
         <Container>
             <UserAvatar>
                 {/* Pull user from randomuser.me */}
-                <img src='https://randomuser.me/api/portraits/women/74.jpg' />
+                <img src='https://randomuser.me/api/portraits/women/74.jpg' alt='placeholder user' />
             </UserAvatar>
             <MessageContent>
                 <Name>
