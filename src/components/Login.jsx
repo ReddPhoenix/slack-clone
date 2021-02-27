@@ -11,7 +11,9 @@ function Login(props) {
                     name: result.user.displayName,
                     photo: result.user.photoURL,
                 }
+                localStorage.setItem('user', JSON.stringify(newUser))
                 props.setUser(newUser);
+
                 // console.log(newUser);
             })
             .catch((error) => {
