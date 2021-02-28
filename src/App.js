@@ -54,7 +54,7 @@ function App() {
               <Chat />
             </Route>
             <Route path='/'>
-              Select or Create a channel
+              Select or Create a Channel
             </Route>       
                   
             {/* <Route path='/'>
