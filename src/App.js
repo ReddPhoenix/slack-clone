@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import styled from 'styled-components';
 import db from './firebase';
+import { auth, provider } from './firebase';
 
 function App() {
   
@@ -20,6 +21,13 @@ function App() {
         // console.log(doc.data());
       })
       )
+    })
+  }
+
+  const signOut = () => {
+    auth.signOut().then(() => {
+      localStorage.removeItem('user');
+      setUser(null);
     })
   }
 
@@ -38,7 +46,7 @@ function App() {
           :
         
         <Container>
-          <Header user={user} />
+          <Header signOut={signOut} user={user} />
           <Main>
             <Sidebar rooms={ rooms } />  
           <Switch>
