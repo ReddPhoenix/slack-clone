@@ -4,17 +4,17 @@ import styled from 'styled-components';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import AddIcon from '@material-ui/icons/Add';
 import { sidebarItemsData } from '../data/SidebarData';
-import db from '../firebase';
 import { useHistory } from 'react-router-dom';
+import db from '../firebase';
 
 
 function Sidebar(props) {
 
     const history = useHistory();
         
-        const goToChannel = (id) => {
-            if (id) {
-                history.push(`/room/${id}`);
+    const goToChannel = (id) => {
+        if(id) {
+            history.push(`/room/${id}`);
             }
         }
     

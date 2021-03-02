@@ -10,6 +10,19 @@ function Chat() {
 
     let { channelId } = useParams();
     const [channel, setChannel] = useState();
+    const [messages, setMessages] = useState([]);
+
+    const getMessages = () => {
+        db.collection('rooms')
+            .doc(channelId)
+            .collection('messages')
+            .orderBy('timestamp', 'asc')
+            .onSnapshot((snapshot) => {
+                let messages = snapshot.docs.map((doc) => doc.data());
+                setMessages(messages);
+            })
+
+    }
     
     const getChannel = () => {
         db.collection('rooms')
@@ -21,6 +34,7 @@ function Chat() {
 
     useEffect(() => {
         getChannel();
+        getMessages();
     }, [channelId])
     
 
@@ -43,6 +57,9 @@ function Chat() {
                 </ChannelDetails>
             </Header>
             <MessageContainer>
+                {
+                    messages.length
+                }
                 <ChatMessage />
             </MessageContainer>
             <ChatInput />
