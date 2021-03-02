@@ -50,7 +50,7 @@ function App() {
           <Main>
             <Sidebar rooms={ rooms } />  
           <Switch>
-            <Route path='/room/:channelId'>
+            <Route path="/room/:channelId">
               <Chat />
             </Route>
             <Route path='/'>
