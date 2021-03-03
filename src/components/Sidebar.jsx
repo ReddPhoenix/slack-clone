@@ -76,6 +76,7 @@ export default Sidebar;
 
 const Container = styled.div`
     background: #3F0E40;
+    // background: #2A2857;
     `
 
 const WorkspaceContainer = styled.div`

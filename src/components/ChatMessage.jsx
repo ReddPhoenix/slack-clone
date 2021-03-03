@@ -6,12 +6,12 @@ function ChatMessage() {
         <Container>
             <UserAvatar>
                 {/* Pull user from randomuser.me */}
-                <img src='https://randomuser.me/api/portraits/women/74.jpg' alt='placeholder user' />
+                <img src='https://randomuser.me/api/portraits/men/74.jpg' alt='placeholder user' />
             </UserAvatar>
             <MessageContent>
                 <Name>
                     FirstName LastName
-                     <span>2/26/2021 9:35:00 AM</span>
+                     <span>3/2/2021 7:35:41 PM</span>
                 </Name>                
                 <Text>
                     This is test text

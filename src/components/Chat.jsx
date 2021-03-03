@@ -9,21 +9,9 @@ import { useParams } from 'react-router-dom';
 function Chat() {
 
     let { channelId } = useParams();
-    const [channel, setChannel] = useState();
-    // const [messages, setMessages] = useState([]);
+    const [channel, setChannel] = useState([]);
+    const [messages, setMessages] = useState([]);
 
-    // const getMessages = () => {
-    //     db.collection('rooms')
-    //         .doc(channelId)
-    //         .collection('messages')
-    //         .orderBy('timestamp', 'asc')
-    //         .onSnapshot((snapshot) => {
-    //             let messages = snapshot.docs.map((doc) => doc.data());
-    //             setMessages(messages);
-    //         })
-
-    // }
-    
     const getChannel = () => {
         db.collection('rooms')
             .doc(channelId)
@@ -32,9 +20,23 @@ function Chat() {
         })
     }
 
+    const getMessages = () => {
+        db.collection('rooms')
+            .doc(channelId)
+            .collection('messages')
+            .orderBy('timestamp', 'asc')
+            .onSnapshot((snapshot) => {
+                let messages = snapshot.docs.map((doc) => doc.data());
+                setMessages(messages);
+            })
+
+    }
+    
+
     useEffect(() => {
         getChannel();
-        // getMessages();
+        // console.log(channel.name)
+        getMessages();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [channelId])
     
@@ -43,11 +45,11 @@ function Chat() {
         <Container>
             <Header>
                 <Channel>
-                    <ChannelName>
+                    <ChannelName key="{channel.name}">
                         # {channel.name}
                     </ChannelName>
                     <ChannelInfo>
-                        Company Announcements
+                        {/* Company Announcements */}
                     </ChannelInfo>
                 </Channel>
                 <ChannelDetails>
