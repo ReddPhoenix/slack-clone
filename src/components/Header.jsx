@@ -31,7 +31,8 @@ function Header({user, signOut }) {
 export default Header
 
 const Container = styled.div`
-    background: #350d36;
+    // background: #350d36;
+    background: #003A7C;
     color: white;
     display: flex;
     align-items: center;
@@ -55,7 +56,10 @@ const SearchContainer = styled.div`
 `
     
 const Search = styled.div`
-    box-shadow: inset 0 0 0 1px rgb(104 74 104);    
+    // original purple    
+    // box-shadow: inset 0 0 0 1px rgb(104 74 104); 
+    // blue option w/ white border
+    box-shadow: inset 0 0 0 1px rgb(247, 247, 247);  
     width: 100%;
     border-radius: 6px;
     display: flex;
