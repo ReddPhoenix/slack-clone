@@ -10,13 +10,15 @@ function ChatInput({sendMessage}) {
         e.preventDefault();
         if (!input) return;
         sendMessage(input);
+        //Clear chat input text after submitting message
+        setInput('');
     }
 
     return (
         <Container>
             <InputContainer>
                 <form>
-                    <input onChange={(e) => setInput(e.target.value)} type='text' placeholder='Enter message...' />
+                    <input onChange={(e) => setInput(e.target.value)} type='text' placeholder='Enter message...' value={input} />
                     <SendButton type='submit' onClick={send}>
                         <Send />
                     </SendButton>
