@@ -63,7 +63,7 @@ function App() {
             </Route> */}
             </Switch>
           </Main>
-          </Container>
+        </Container>
         }
       </Router>
     </div>
@@ -78,6 +78,7 @@ const Container = styled.div`
   display: grid;
   // fr = fills in one free space
   grid-template-rows: 38px minmax(0, 1fr);
+  overflow: auto; 
 `
 
 const Main = styled.div`
