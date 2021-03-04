@@ -27,6 +27,7 @@ function Chat() {
             .orderBy('timestamp', 'asc')
             .onSnapshot((snapshot) => {
                 let messages = snapshot.docs.map((doc) => doc.data());
+                console.log(messages);
                 setMessages(messages);
             })
 
@@ -36,7 +37,7 @@ function Chat() {
     useEffect(() => {
         getChannel();
         // console.log(channel.name)
-        getMessages();
+        getMessages();   
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [channelId])
     
@@ -46,7 +47,7 @@ function Chat() {
             <Header>
                 <Channel>
                     <ChannelName key="{channel.name}">
-                        # {channel.name}
+                        # {channel && channel.name}
                     </ChannelName>
                     <ChannelInfo>
                         {/* Company Announcements */}
@@ -60,10 +61,20 @@ function Chat() {
                 </ChannelDetails>
             </Header>
             <MessageContainer>
-                {/* {
-                    messages.length
-                } */}
-                <ChatMessage />
+                {
+                    messages.length > 0 &&
+                    messages.map((data, index) => (
+                        <ChatMessage
+                            // data from Firebase
+                            text={data.text}
+                            name={data.user}
+                            image={data.userImage}
+                            timestamp={data.timestamp.seconds}
+                            key={data.timestamp.seconds}
+                        />
+                    ))
+                }
+                
             </MessageContainer>
             <ChatInput />
         </Container>

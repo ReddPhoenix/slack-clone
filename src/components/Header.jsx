@@ -31,7 +31,9 @@ function Header({user, signOut }) {
 export default Header
 
 const Container = styled.div`
+    // original purple    
     // background: #350d36;
+    // blue option
     background: #003A7C;
     color: white;
     display: flex;
