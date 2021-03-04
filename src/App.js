@@ -76,7 +76,8 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 38px auto
+  // fr = fills in one free space
+  grid-template-rows: 38px minmax(0, 1fr);
 `
 
 const Main = styled.div`
