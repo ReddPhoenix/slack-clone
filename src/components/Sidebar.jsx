@@ -35,11 +35,11 @@ function Sidebar(props) {
                 <Name>
                     Workspace
                 </Name>
-                <NewMessage>
+                {/* <NewMessage>
                     <AddCircleOutlineIcon />
-                </NewMessage>
+                </NewMessage> */}
             </WorkspaceContainer>
-            <MainChannels>
+            {/* <MainChannels>
                 {
                     sidebarItemsData.map(item => (
                         <MainChannelItem >
@@ -48,7 +48,7 @@ function Sidebar(props) {
                         </MainChannelItem>
                     ))
                 }
-            </MainChannels>
+            </MainChannels> */}
             <ChannelsContainer>
                 <NewChannelContainer>
                     <div>
