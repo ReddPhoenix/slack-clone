@@ -18,7 +18,7 @@ function Header({user, signOut }) {
             </Main>
             <UserContainer>
                 <Name>
-                    {/* {user.name} */}
+                    {user.name}
                 </Name>
                 <UserImage onClick={signOut}>
                     <img src={user.photo ? user.photo : 'https://i.imgur.com/6VBx3io.png'} alt='user profile'/>

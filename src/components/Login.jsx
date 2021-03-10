@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { auth, provider } from '../firebase';
+import Taskably from '../assets/taskably.png'
 
 function Login(props) {
 
@@ -24,7 +25,8 @@ function Login(props) {
     return (
         <Container>
             <Content>
-                <SlackImg src='https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png' />
+                {/* <SlackImg src='https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png' /> */}
+                <SlackImg src={Taskably} />
                 <h1>Sign in to Slack</h1>
                 <SignInButton onClick={() => signIn()}>
                     Sign In with Google
