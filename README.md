@@ -24,7 +24,7 @@ React chatroom app created using styled components on the frontend and utilizing
  ## **License**
 MIT License
 
-Copyright (c) [2020] [Walter Guerrero]
+Copyright (c) [2021] [Walter Guerrero]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
